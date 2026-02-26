@@ -1,0 +1,12 @@
+:root {
+    --blue-color: #0156A6
+}
+
+body {
+    margin: 0;
+}
+nav {
+    background-color: var(--blue-color);
+    display: flex;
+    height: 5vh;
+}
