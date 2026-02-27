@@ -1,12 +1,108 @@
-:root {
+
+/*Font Setup for buttons*/
+.gabarito-Buttons {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: 51px;
+  }
+
+  
+.gantari-font> {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: 13px ;
+  }
+  :root {
     --blue-color: #0156A6
 }
 
 body {
+    
     margin: 0;
+    font-family: 'Gabarito', sans-serif;
 }
 nav {
     background-color: var(--blue-color);
     display: flex;
     height: 5vh;
+}
+
+#hero {
+    background-image: url(/IMages/Hero-Image.png );
+    background-size: 100%;
+    height: 100vh;
+    background-repeat: none;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Hero-Text {
+    height: 410px;
+    width: 576px;
+}
+
+#beginButton {
+    text-decoration: none;
+    border-radius: 56px;
+    background-color: #01A640;
+    color: white;
+    height: 14vh;
+    width: 40vw;
+    font-family: "Gabarito";
+    font-size: 51px;
+    outline: none;
+    border: #01A640
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+   
+    
+}
+
+#bottom-nav {
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(90deg, #0076A8, #002E42 100%)
+
+   
+}
+
+#welcome-screen {
+    font-family: "gantari";
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+}
+
+#welcome-screen > p {
+    color: #606060;
+}
+
+#nextButton {
+    text-decoration: none;
+    border-radius: 56px;
+    background-color: #01A640;
+    color: white;
+    height: 6vh;
+    width: 12vw;
+    font-family: "Gabarito";
+    font-size: 30px;
+    outline: none;
+    border: #01A640
+}
+
+#income {
+    padding: 2rem;
 }
