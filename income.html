@@ -24,12 +24,20 @@
     <section id="welcome-screen">
         <h1>Welcome</h1>
         <p>For starters, let's calculate your Net Monthly Income to really grasp <br> what you're working with!</p>
-        <!--Add HTML for drop down menu-->
+        <!--Add a gross income for drop down menu-->
         <div class= "dropdown">
-            <input type="search" name="occupation" id="careers" >
-            <select id="Careers" name="Careers">
-                <option
+            <label for="Careers">Please enter a Job title, or occupation</label>
+            <select name="Careers" id="Careers">
+                <option value="Game Developer ">Game Developer - $105,000</option>
+                <option value="Engineering">Engineering - $96,000</option>
+                <option value="Preacher">Preacher - $130,000</option>
+                <option value="Nurse">Nurse - $130,000</option>
+                <option value="Veterinarian">Veterinarian - $130,000</option>
+                <option value="Professional Athlete">Professional Athlete - $130,000</option>
+                <input type="Other">Other</input>
             </select>
+            
+            <!--Put the text "Please enter a job title, or occupation within the dropdown"-->
 
         </div>
         <form id="income">

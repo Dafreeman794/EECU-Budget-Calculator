@@ -103,6 +103,19 @@ footer {
     border: #01A640
 }
 
+/*Income Styling*/
 #income {
     padding: 2rem;
+    margin: 10px;
+
 }
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+/*Try to enlarge the dropdown based off of the figma design and 
