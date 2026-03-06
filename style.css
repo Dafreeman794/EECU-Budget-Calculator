@@ -15,7 +15,11 @@
     font-style: 13px ;
   }
   :root {
-    --blue-color: #0156A6
+    --blue-color: #0156A6;
+    --green-btn: #01A640;
+    --good-outcome: #60FF7D;
+    --grey: #606060;
+    --main-content-border:#E0E0E0;
 }
 
 body {
@@ -160,4 +164,72 @@ footer {
 #income-1 {
     background-color: transparent;
     margin-left: -14vh;
+}
+
+#payments-chart {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: var(--main-content-border);
+    border-width: 0.35rem;
+    
+    
+}
+
+#export {
+    
+    width: 20vw;
+    height: 7vh;
+    border-radius: 50px;
+    border-style: var(--green-btn);
+    background-color: var(--green-btn);
+    color: white;
+}
+
+#btns-container {
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+
+#export-container {
+display: flex;
+justify-content: center;
+}
+
+.btns {
+background-color: white;
+border: white;
+
+}
+
+#outcome {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+     font-style: normal;
+     color: var(--good-outcome);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+     
+}
+
+#outcome > #remainder-h2 {
+    font-family: "Gantari", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--grey);
+} 
+
+#rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultRow {
+    display: flex;
+
 }

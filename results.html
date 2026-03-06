@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Gabarito:wght@400..900&family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Gabarito:wght@400..900&family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
+
+       </style>
+       
+   
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,54 +19,73 @@
             <img src="/IMages/images 1.png" alt="EECU Logo">
         </a>
     </nav>
-    <section>
-        <h1>Congrats...</h1>
-        <p>You...</p>
+    <section id="outcome">
+        <h1 id="outcome-h1">Congratulations!</h1>
+        <h1 id="outcome-h2">Your Monthly balance is Positive!</h1>
+        <h2 id="remainder-h2">You have a remaninder of exactly $(Insert total left).</h2 >
+            <!--These will be upadted based on outcome, these titles are just the placeholders-->
     </section>
-    <section>
-        <h2>Original Net Income: (net)</h2>
-        <div class="resultRow">
-            <p class="label"></p> <!--Insert each label and leave result blank for JS-->
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
-        </div>
-        <div class="resultRow">
-            <p class="label"></p>
-            <p class="result"></p>
+    
+    <main id="payments-chart">
+        <section id="rows">
+            <h2>Original Net Income: (net)</h2>
+            <div class="resultRow">
+                <p class="label">Rent/Morage</p> <!--Insert each label and leave result blank for JS-->
+                <p class="result">$$$$</p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Vehicles <br>Payments</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Food/Edibles</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Clothing</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Utilities</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Debt(Credit, student <br>loans, etc)</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Media</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Entertainment</p>
+                <p class="result"></p>
+            </div>
+            <div class="resultRow">
+                <p class="label">Other</p>
+                <p class="result"></p>
+            </div>
+
+            <div id="chart-container">
+                <!--Js chart goes here-->
+            </div>
+    </main>
+        <div id="btns-container">
+            <button class="btns">
+                <img src="Copy.svg" alt="copy-button" type="svg">
+            </button>
+            <button class="btns">
+                <img src="Download.svg" alt="download-button" type="svg">
+            </button>
+            <button class="btns">
+                <img src="More vertical.svg" alt="more-options" type="svg">
+            </button>
         </div>
         
-        <button id="copy"></button>
-        <button id="download"></button>
-        <button id="otherFunction"></button>
 
-        <button>Export As PDF</button>
+        <div id="export-container">
+            <button id="export">Export As PDF</button>
+        </div>
         <button id="debtChecker" name="debt">Ask For Advice</button> <!--display: none if name is debt, check with JS, change to noDebt if none & change display -->
 
     </section>
