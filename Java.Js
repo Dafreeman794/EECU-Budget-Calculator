@@ -118,7 +118,7 @@ function displayCareerInfo() {
             taxesDiv.innerHTML += '<p class=greybox id="netSalary">Your New Net Salary: ' + netSalary.toFixed(2) + '</p>';
             taxesDiv.innerHTML += `<p class=grey id=monthlyNetSalary> Your Monthly Net Salary: ${monthlyNetSalary}</p>`;
             welcomeScreen.innerHTML += `<a href="expenses.html" id="nextButton">Next</a>`;
-}}};
+})}
 
 
 // Initialize the application

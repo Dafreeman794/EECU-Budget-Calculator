@@ -137,7 +137,6 @@ footer {
     font-size:25px;
     color:#818080;
     background-color:#d9d9d9;
-    width:fit-content;
     height: 8.5vh;
     margin-bottom:5vh;
 }
@@ -157,7 +156,7 @@ footer {
 }
 #userExpenses{
     display:flex;
-    flex-flow:row wrap;
+
     width: 80vw;
 }
 #userExpenses label{
@@ -172,13 +171,13 @@ footer {
     margin-left: -14vh;
 }
 
-.careers {
+#careers {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: fit-content;
-    height: 80vh;
+
+    height: 10vh;
 }
 
 /* Desktop */
@@ -200,4 +199,47 @@ footer {
     .indexBody {
         background-image: url(/IMages/Mobile.png);
     }
+}
+
+
+/* Next button */
+
+a[href="expenses.html"] {
+    text-decoration: none;
+    border-radius: 56px;
+    background-color: #01A640;
+    color: white;
+    height: 6vh;
+    width: 12vw;
+    font-family: "Gabarito";
+    font-size: 30px;
+    outline: none;
+    border: #01A640;
+    text-align: center;
+    line-height: 6vh;
+    position: absolute;
+    justify-self: flex-end;
+    margin-top: 77vh;
+    border: none;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 12px;
+    height: 80vh;
+    margin-bottom: 40vh;
+    text-decoration: none;
+    border: none;
+}
+
+#salary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:47VH;
+    height: 10vh;
 }
