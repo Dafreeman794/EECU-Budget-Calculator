@@ -7,19 +7,47 @@
     font-style: 51px;
   }
 
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
+    /* align-items: center; */
+  }
   
+  .row > label {
+    background-color: var(--light-gray);
+    width: 40%;
+    padding: 0.5rem;
+  }
+
+  .row > label:before {
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .row.housing > label:before {
+    background-image: url("./IMages/Home.svg")
+  }
+  
+.row > input {
+    width: 60%;
+}
+
 .gantari-font> {
     font-family: "Gantari", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: 13px ;
   }
+
   :root {
     --blue-color: #0156A6;
     --green-btn: #01A640;
     --good-outcome: #60FF7D;
     --grey: #606060;
     --main-content-border:#E0E0E0;
+    --light-gray: #F3F3F3;
 }
 
 body {
@@ -159,12 +187,12 @@ footer {
 
     width: 80vw;
 }
-#userExpenses label{
+/* #userExpenses label{
     width:20%;
 }
 #userExpenses input{
     width:80%;
-}
+} */
 
 #income-1 {
     background-color: transparent;
@@ -178,6 +206,30 @@ footer {
     align-items: center;
 
     height: 10vh;
+}
+
+.expenses-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-align {
+    display: flex;
+}
+
+.label-box {
+    Display:flex;
+    background-color:rgba(243, 243, 243, 1)
+}
+
+.expense-desc {
+display:flex;
+background-color: rgba(243, 243, 243, 1)
+}
+
+.expenseFormInput {
+background-color: rgba(217, 217, 217, 1);
+border: none;
 }
 
 /* Desktop */
