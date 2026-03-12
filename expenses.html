@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Income</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/IMages/images 1.png">
 </head>
-
 <body>
     <nav>
         <a href="index.html" id="income-1">
@@ -15,94 +16,83 @@
         </a>
     </nav>
     <section class="net-income">
-        <h1>Your current Net Income: <br> (Net)</h1>
-        <p>Congrats! Now we have to fill out post-income necessities. Please fill out any expense you must provide:</p>
+        <h1>Your current Net Income: <br> <span id="displayNet">(Net)</span></h1>
+        <p>Congrats! Now we have to fill out post-income necessities.</p>
+    
         <form id="userExpenses">
-            <section class="expenses-column">
-                <div class="row housing">
-                    <label for="">Housing</label>
-                    <input type="number" name="housing">
-                </div>
-                <!--
-            <span class="input-align">
-                <span class="label-box">
-            <label for="rent">
-                <span class="expense-desc">
-                <img src="./IMages/Home.svg" alt="Home-Icon">
-                <p>Rent/Mortage</p>
-            </label>
-        </span>
-            <input type="number" name="rent" id="rent" class="expenseFormInput" placeholder="Please enter a mortgage">
-            </span>
-            <!--Add Icons via emojis or img tag-->
-        <span class="input-align">
-            <span class="label-box">
-            <label for="vehicle">
-                <span class="expense-desc">
-                <img src="./IMages/Car.svg" alt="Home-Icon">
-                <p>Vehicle Payment</p>
-            </span>
-            </label>
-        </span>
-            <input type="number" name="vehicle" id="vehicle" class="expenseFormInput"
-                placeholder="Please enter Transportation payments">
-        </span>
-        <span class="input-align">
-            <label for="food">
-                <img src="./IMages/Shopping cart.svg" alt="Home-Icon">
-                Food/Edibles
-            </label>
-            <input type="number" name="food" id="food" class="expenseFormInput"
-                placeholder="Please enter Food expenses">
-            </span>
-            <span class="input-align">
-            <label for="clothing">
-                <img src="./IMages/Clothing.svg" alt="Home-Icon">
-                Clothing
-            </label>
-            <input type="number" name="clothing" id="clothing" class="expenseFormInput"
-                placeholder="Please enter Clothing expenses">
-            </span>
-            <span class="input-align">
-            <label for="utilities">
-                <img src="./IMages/Utilities.svg" alt="Home-Icon">
-                Utilities
-            </label>
-            <input type="number" name="utilities" id="utilities" class="expenseFormInput"
-                placeholder="Please enter Utilities expenses">
-            </span>
-            <span class="input-align">
-            <label for="debt">
-                <img src="./IMages/Credit card.svg" alt="Home-Icon">
-                Debt(Credit, Student Loans, etc)
-            </label>
-            <input type="number" name="debt" id="debt" class="expenseFormInput" placeholder="Please enter">
-        </span>
-            <!--Continue adding form informatinon and labels-->
-            <span class="input-align">
-            <label for="media">
-                <img src="./IMages/Media.svg" alt="Home-Icon">
-                Media
-            </label>
-            <input type="number" name="media" id="media" class="expenseFormInput" placeholder="Please enter">
-        </span>
-        <span class="input-align">
-            <label for="entertainment">
-                <img src="./IMages/Television.svg" alt="Home-Icon">
-                Entertainment
-            </label>
-            <input type="number" name="entertainment" id="entertainment" class="expenseFormInput"
-                placeholder="Please enter">
-            </span>
-            <span class="input-align">
-            <label for="other">
-                <img src="./IMages/Other.svg" alt="Home-Icon">
-                Other
-            </label>
-            <input type="number" name="other" id="other" class="expenseFormInput" placeholder="Please enter">
-            </span>
-            </section>
-            <!--Last form may require a button & styling for functionality-->
+            <div class="expense-row">
+                <label for="rent" class="label-box">
+                    <img src="./IMages/Home.svg" alt="Home">
+                    <span>Rent/Mortgage</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter a mortgage">
+            </div>
+    
+            <div class="expense-row">
+                <label for="vehicle" class="label-box">
+                    <img src="./IMages/Car.svg">
+                    <span>Vehicle Payment</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter transportation payments">
+            </div>
+    
+            <div class="expense-row">
+                <label for="food" class="label-box">
+                    <img src="./IMages/Shopping cart.svg">
+                    <span>Food/Edibles</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter Food expenses">
+            </div>
+
+            <div class="expense-row">
+                <label for="cloths" class="label-box">
+                    <img src="./IMages/Shopping cart.svg">
+                    <span>Clothing</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter clothing expenses">
+            </div>
+
+            <div class="expense-row">
+                <label for="Utils" class="label-box">
+                    <img src="./IMages/Utilities.svg">
+                    <span>Utilities</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter Utility expenses">
+            </div>
+            
+            <div class="expense-row">
+                <label for="debts" class="label-box">
+                    <img src="./IMages/Credit card.svg">
+                    <span>Debts (Credit, Student Loans, etc)</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter debt(s)">
+            </div>
+
+            <div class="expense-row">
+                <label for="media" class="label-box">
+                    <img src="./IMages/Media.svg">
+                    <span>Media</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter media subscriptions">
+            </div>
+
+            <div class="expense-row">
+                <label for="Entertainment" class="label-box">
+                    <img src="./IMages/Television.svg">
+                    <span>Entertainment</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter entertainment purchases">
+            </div>
+
+            <div class="expense-row">
+                <label for="other" class="label-box">
+                    <img src="./IMages/Other.svg">
+                    <span>Other</span>
+                </label>
+                <input type="number" class="expense-input" placeholder="Please enter any other mandatory purchase">
+            </div>
+
+            <a href="results.html" class="Btn">Done</a>
         </form>
     </section>
     <!--Add Done Button-->

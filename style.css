@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Gabarito:wght@400..900&family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Gabarito:wght@400..900&family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*Font Setup for buttons*/
 .gabarito-Buttons {
@@ -78,7 +80,9 @@ nav {
     width: 576px;
 }
 
-a {
+.Btn {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     border-radius: 60px;
     color: white;
@@ -92,11 +96,11 @@ a {
     line-height: 12vh;
     background-color: #01A640;
 }
-#beginButton {
-    border-radius: 60px;
-    color: rgb(251, 251, 251);
-    text-size-adjust: 75%;
+
+#income-1 {
+    background-color: transparent;
 }
+
 
 
 footer {
@@ -152,69 +156,83 @@ footer {
 }
 
 /*Income Styling*/
-#income {
-    padding: 0;
-    background-color:#d9d9d9;
-    width:32vw;
-    height: 8.5vh;
-    color:#818080;
-}
-.dropdown > select{
-    border:none;
-    padding: 0;
-    font-size:25px;
-    color:#818080;
-    background-color:#d9d9d9;
-    height: 8.5vh;
-    margin-bottom:5vh;
-}
 .net-income {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    height: 80vh;
-}
-.net-imcome h1{
-    font-size:50px;
-}
-.net-income > p {
-    color: #606060;
-    font-size:30px;
-}
-#userExpenses{
-    display:flex;
-
-    width: 80vw;
-}
-/* #userExpenses label{
-    width:20%;
-}
-#userExpenses input{
-    width:80%;
-} */
-
-#income-1 {
-    background-color: transparent;
-    margin-left: -14vh;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Gantari', sans-serif;
 }
 
-#careers {
+h1 { font-size: 2.5rem; margin-bottom: 10px; }
+#displayNet { color: #818080; }
+
+#userExpenses {
+    width: 100%;
+    max-width: 946px; 
+    margin-top: 30px;
+}
+
+/* The Row Container */
+.expense-row {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: 60px;
+    margin-bottom: 15px;
+    overflow: hidden; 
+}
+
+.label-box {
+    display: flex;
     align-items: center;
-
-    height: 10vh;
+    background-color: #f3f3f3;
+    width: 40%; 
+    padding: 0 15px;
+    cursor: pointer;
 }
 
-.expenses-column {
-    display: flex;
-    flex-direction: column;
+.label-box img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
-.input-align {
-    display: flex;
+.label-box span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.expense-input {
+    flex: 1; /* Input takes the rest of the 60% */
+    background-color: #d9d9d9;
+    border: none;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #555;
+    outline: none;
+}
+
+.expense-input::placeholder {
+    color: #999;
+}
+
+
+#doneButton {
+    background-color: #00a846;
+    color: white;
+    border: none;
+    padding: 15px 100px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+#doneButton:hover {
+    background-color: #008f3b;
 }
 
 .label-box {
@@ -232,45 +250,45 @@ background-color: rgba(217, 217, 217, 1);
 border: none;
 }
 
-/* Desktop */
+
 .indexBody {
     background-image: url("/IMages/Hero-Image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-@media (min-width: 769px) {
-    .indexBody {
-        background-image: url("/IMages/Hero-Image.png");
-        background-size: cover;
-        background-position: center;
-    }
-}
-/* Mobile */
+
 @media (max-width: 768px) {
     .indexBody {
         background-image: url(/IMages/Mobile.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .Btn {
+        font-size: 29px;
+        height: 48px;
+        text-align: center;
+        
+    }
+    #Hero-Text {
+        height: 250px;
+        width: 351px;
     }
 }
-
-
-/* Next button */
 
 a[href="expenses.html"] {
     text-decoration: none;
     border-radius: 56px;
     background-color: #01A640;
     color: white;
-    height: 6vh;
-    width: 12vw;
+    height: 12vh;
+    width: 30vw;
     font-family: "Gabarito";
-    font-size: 30px;
+    font-size: 51px;
     outline: none;
     border: #01A640;
     text-align: center;
-    line-height: 6vh;
     position: absolute;
-    justify-self: flex-end;
     margin-top: 77vh;
     border: none;
 }
