@@ -18,66 +18,90 @@
         <h1>Your current Net Income: <br> (Net)</h1>
         <p>Congrats! Now we have to fill out post-income necessities. Please fill out any expense you must provide:</p>
         <form id="userExpenses">
+            <section class="expenses-column">
+                <div class="row housing">
+                    <label for="">Housing</label>
+                    <input type="number" name="housing">
+                </div>
+                <!--
+            <span class="input-align">
+                <span class="label-box">
             <label for="rent">
+                <span class="expense-desc">
                 <img src="./IMages/Home.svg" alt="Home-Icon">
-                Rent/Mortage
+                <p>Rent/Mortage</p>
             </label>
+        </span>
             <input type="number" name="rent" id="rent" class="expenseFormInput" placeholder="Please enter a mortgage">
+            </span>
             <!--Add Icons via emojis or img tag-->
-
+        <span class="input-align">
+            <span class="label-box">
             <label for="vehicle">
+                <span class="expense-desc">
                 <img src="./IMages/Car.svg" alt="Home-Icon">
-                Vechicle Payment
+                <p>Vehicle Payment</p>
+            </span>
             </label>
+        </span>
             <input type="number" name="vehicle" id="vehicle" class="expenseFormInput"
                 placeholder="Please enter Transportation payments">
-
+        </span>
+        <span class="input-align">
             <label for="food">
                 <img src="./IMages/Shopping cart.svg" alt="Home-Icon">
                 Food/Edibles
             </label>
             <input type="number" name="food" id="food" class="expenseFormInput"
                 placeholder="Please enter Food expenses">
-
+            </span>
+            <span class="input-align">
             <label for="clothing">
                 <img src="./IMages/Clothing.svg" alt="Home-Icon">
                 Clothing
             </label>
             <input type="number" name="clothing" id="clothing" class="expenseFormInput"
                 placeholder="Please enter Clothing expenses">
-
+            </span>
+            <span class="input-align">
             <label for="utilities">
                 <img src="./IMages/Utilities.svg" alt="Home-Icon">
                 Utilities
             </label>
             <input type="number" name="utilities" id="utilities" class="expenseFormInput"
                 placeholder="Please enter Utilities expenses">
-
+            </span>
+            <span class="input-align">
             <label for="debt">
                 <img src="./IMages/Credit card.svg" alt="Home-Icon">
                 Debt(Credit, Student Loans, etc)
             </label>
             <input type="number" name="debt" id="debt" class="expenseFormInput" placeholder="Please enter">
-            <!--Continue adding form informatino and labels-->
-
+        </span>
+            <!--Continue adding form informatinon and labels-->
+            <span class="input-align">
             <label for="media">
                 <img src="./IMages/Media.svg" alt="Home-Icon">
                 Media
             </label>
             <input type="number" name="media" id="media" class="expenseFormInput" placeholder="Please enter">
-
+        </span>
+        <span class="input-align">
             <label for="entertainment">
                 <img src="./IMages/Television.svg" alt="Home-Icon">
                 Entertainment
             </label>
             <input type="number" name="entertainment" id="entertainment" class="expenseFormInput"
                 placeholder="Please enter">
-
+            </span>
+            <span class="input-align">
             <label for="other">
                 <img src="./IMages/Other.svg" alt="Home-Icon">
                 Other
             </label>
             <input type="number" name="other" id="other" class="expenseFormInput" placeholder="Please enter">
+            </span>
+            </section>
             <!--Last form may require a button & styling for functionality-->
         </form>
     </section>
