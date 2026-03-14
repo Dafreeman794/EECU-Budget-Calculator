@@ -29,7 +29,7 @@ function createOptions(careers) {
     careers.forEach((career, index) => {
         const option = document.createElement("option");
         // Using toLocaleString for prettier numbers
-        option.textContent = `${career.Occupation}: $${career.Salary.toLocaleString()}`;
+        option.textContent = `${career.Occupation}`;
         option.value = index; 
         dropdown.appendChild(option);
     });
@@ -74,7 +74,7 @@ function displayCareerInfo() {
 
     // Reset the UI for the new selection
     incomeInfo.innerHTML = `<h2 class="grey">Gross Income: $${salary.toLocaleString()}</h2>`;
-    taxesDiv.innerHTML = `<button id="nextTaxesButton">Calculate Taxes</button>`;
+    taxesDiv.innerHTML = `<button id="nextTaxesButton">Next</button>`;
 
     // Add listener to the newly created button
     document.getElementById("nextTaxesButton").addEventListener("click", () => {
@@ -87,7 +87,7 @@ function displayCareerInfo() {
         monthlyNetSalary = (netSalary / 12).toFixed(2);
 
         taxesDiv.innerHTML = `
-            <h3 class="grey">Before we show you how much you have for spending, we must first pay good ol' Uncle Sam!</h3>
+            <p class="grey">Before we show you how much you have for spending, we must first pay good ol' Uncle Sam!</p>
             <p class="greybox">Medicare (1.45%): -$${medicareDeduction.toFixed(2)}</p>
             <p class="greybox">Social Security (6.2%): -$${socialSecurityDeduction.toFixed(2)}</p>
             <p class="greybox">State Tax (4%): -$${stateTaxDeduction.toFixed(2)}</p>
@@ -95,7 +95,7 @@ function displayCareerInfo() {
             <hr>
             <p class="greybox" id="netSalary"><strong>Annual Net Salary: $${netSalary.toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></p>
             <p class="grey" id="monthlyNetSalary">Your Monthly Net Salary: $${parseFloat(monthlyNetSalary).toLocaleString()}</p>
-            <a href="expenses.html" class="next-link" style="display:block; margin-top:20px;">Continue to Expenses</a>
+            <a href="expenses.html" class="next-link" style="display:block; margin-top:20px;">Next</a>
         `;
     });
 }

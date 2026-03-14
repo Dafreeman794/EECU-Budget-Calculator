@@ -7,33 +7,25 @@
     <title>Income</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/IMages/images 1.png">
+    <link rel="icon" href="/IMages/logo.webp">
 </head>
 
 <body>
     <nav>
         <a href="index.html" id="income-1">
-            <img src="/IMages/images 1.png" alt="EECU Logo">
+            <img src="/IMages/images 1.png" id="EECULogo" alt="EECU Logo">
         </a>
     </nav>
     <section id="welcome-screen">
         <h1>Welcome</h1>
         <p>For starters, let's calculate your Net Monthly Income to really grasp <br> what you're working with!</p>
         <!--Add HTML for drop down menu-->
-        <div class="dropdown">
+        <section class="dropdown">
             <select id="careers" name="careers">
+                <option disabled selected>Please Choose a Job Title, or Occupation</option>
             </select>
-
-            <select id="salary" name="salary">
-                <option value="Other">Other (Please Type In)</option>
-            </select>
-
-            <a href="expenses.html" class="Btn">Next</a>
-
-            <!--Put the text "Please enter a job title, or occupation within the dropdown"-->
-
-        </div>
-        </div>
+            <div id="income">
+        </section>
         <div id="taxes"></div>
         <div id="fedTaxes"></div>
     </section>
