@@ -102,3 +102,20 @@ function displayCareerInfo() {
 
 // Kick off the process
 getCareers();
+
+// ... keep your existing fetch and federal tax functions ...
+
+// Update the "Next" link to save data when clicked
+document.querySelector(".Btn").addEventListener("click", (e) => {
+    const medicareDeduction = choice.Salary * 0.0145;
+    const socialSecurityDeduction = choice.Salary * 0.062;
+    const stateTaxDeduction = choice.Salary * 0.04;
+    const federalTaxDeduction = fedTax(choice.Salary);
+    
+    const annualNet = choice.Salary - (medicareDeduction + socialSecurityDeduction + stateTaxDeduction + federalTaxDeduction);
+    const monthlyNet = (annualNet / 12).toFixed(2);
+
+    // Save to localStorage for the next pages
+    localStorage.setItem("monthlyNet", monthlyNet);
+    localStorage.setItem("totalTaxes", (choice.Salary / 12 - monthlyNet).toFixed(2)); 
+});
