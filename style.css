@@ -56,10 +56,16 @@ body {
     margin: 0;
     font-family: 'Gabarito', sans-serif;
 }
+
 nav {
     background-color: var(--blue-color);
     display: flex;
     height: 11vh;
+}
+
+#EECULogo {
+background-size: 100%;
+height: 100%;
 }
 
 #hero {
@@ -97,7 +103,6 @@ height: 25vh;
 }
 
 
-
 footer {
    display: flex;
    justify-content: center;
@@ -110,17 +115,15 @@ footer {
 #bottom-nav {
     height: 10vh;
     width: 100%;
-    background: linear-gradient(90deg, #0076A8, #002E42 100%)
-
-   
+    background: linear-gradient(90deg, #0076A8, #002E42 100%)   
 }
-#welcome-screen > a{
+
+#screen > a{
     line-height:7vh;
     height:7vh;
 }
 
-
-#welcome-screen {
+#screen {
     font-family: "gantari";
     display: flex;
     flex-direction: column;
@@ -128,11 +131,12 @@ footer {
     align-items: center;
     height: 80vh;
 }
-#welcome-screen > h1{
+
+#screen > h1{
     font-size:50px;
 }
 
-#welcome-screen > p {
+.mainTxt {
     color: #606060;
     font-size:30px;
 }
@@ -150,11 +154,11 @@ footer {
     border: #01A640
 }
 
-
 .grey {
-    color: #606060;
-    font-size: 30px;
+    color: #818080;
+    font-size: 25px;
 }
+
 /*Income Styling*/
 .net-income {
     display: flex;
@@ -216,6 +220,8 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
 }
 
 #nextTaxesButton {
+    display: block;
+    margin: 4rem -2rem;
     text-decoration: none;
     border-radius: 56px;
     background-color: #01A640;
@@ -225,9 +231,9 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     font-family: "Gabarito";
     font-size: 51px;
     outline: none;
-    border: #01A640;
-    text-align: center;
     border: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 /* The Row Container */
@@ -261,7 +267,7 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
 }
 
 .expense-input {
-    flex: 1; /* Input takes the rest of the 60% */
+    flex: 1; 
     background-color: #d9d9d9;
     border: none;
     padding: 0 20px;
@@ -273,7 +279,6 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
 .expense-input::placeholder {
     color: #999;
 }
-
 
 #doneButton {
     background-color: #00a846;
@@ -307,11 +312,115 @@ border: none;
 }
 
 
-.indexBody {
+#indexMain {
     background-image: url("/IMages/Hero-Image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+a[href="expenses.html"] {
+    text-decoration: none;
+    border-radius: 56px;
+    background-color: #01A640;
+    color: white;
+    height: 12vh;
+    width: 30vw;
+    font-family: "Gabarito";
+    font-size: 51px;
+    outline: none;
+    border: #01A640;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+#nextToExpenses {
+    display: none;
+}
+
+#taxBreakdown {
+    margin-bottom: 8rem;
+}
+
+/*Footer Stuff*/
+footer {
+  margin-top: 5%;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#incoming footer {
+margin: 16rem auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+#footer-apps {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#footer-apps img {
+  height: 32px;
+}
+
+#footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footerBottom ul:first-of-type a, 
+#footerBottom small{
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+}
+
+#footerLink {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0054a4;
+  height: 25vh;
+  align-items: center;
+}
+
+#footerLink a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+}
+
+#footerLink img {
+  height: 60%;
+}
+
+#footerLink ul li {
+  margin-bottom: 1rem;
+}
+
+#overlay button{
+  background-color: var(--main-blue);
+  margin: 1vh 2vw;
+  width: 60%;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 1.5vh 0;
+  font-weight: 600;
+  font-size: larger;
+}
+
+#overlay button:hover {
+  background-color: var(--darkblue);
 }
 
 @media (max-width: 768px) {
@@ -346,22 +455,8 @@ border: none;
         background-size: 100%;
         height: 100px;
     }
-    
-}
+    footer {
+        display: none;
+    }
 
-a[href="expenses.html"] {
-    text-decoration: none;
-    border-radius: 56px;
-    background-color: #01A640;
-    color: white;
-    height: 12vh;
-    width: 30vw;
-    font-family: "Gabarito";
-    font-size: 51px;
-    outline: none;
-    border: #01A640;
-    text-align: center;
-    margin-top: 77vh;
-    border: none;
 }
-

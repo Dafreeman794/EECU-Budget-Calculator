@@ -2,7 +2,9 @@ let choice = {
     Occupation: "",
     Salary: 0
 };
+
 let monthlyNetSalary = 0;
+let taxesButtonListenerAdded = false;
 
 // Element Selectors
 const dropdown = document.getElementById("careers");
@@ -72,50 +74,47 @@ function displayCareerInfo() {
     const salary = choice.Salary;
     if (!salary) return;
 
-    // Reset the UI for the new selection
-    incomeInfo.innerHTML = `<h2 class="grey">Gross Income: $${salary.toLocaleString()}</h2>`;
-    taxesDiv.innerHTML = `<button id="nextTaxesButton">Next</button>`;
+    // Update gross income
+    document.getElementById("grossIncomeAmount").textContent = `$${salary.toLocaleString()}`;
 
-    // Add listener to the newly created button
-    document.getElementById("nextTaxesButton").addEventListener("click", () => {
-        const medicareDeduction = salary * 0.0145;
-        const socialSecurityDeduction = salary * 0.062;
-        const stateTaxDeduction = salary * 0.04;
-        const federalTaxDeduction = fedTax(salary);
-        
-        const netSalary = salary - medicareDeduction - socialSecurityDeduction - stateTaxDeduction - federalTaxDeduction;
-        monthlyNetSalary = (netSalary / 12).toFixed(2);
+    // Reset UI state
+    document.getElementById("nextTaxesButton").style.display = "block";
+    document.getElementById("taxBreakdown").style.display = "none";
+    document.getElementById("nextToExpenses").style.display = "none";
 
-        taxesDiv.innerHTML = `
-            <p class="grey">Before we show you how much you have for spending, we must first pay good ol' Uncle Sam!</p>
-            <p class="greybox">Medicare (1.45%): -$${medicareDeduction.toFixed(2)}</p>
-            <p class="greybox">Social Security (6.2%): -$${socialSecurityDeduction.toFixed(2)}</p>
-            <p class="greybox">State Tax (4%): -$${stateTaxDeduction.toFixed(2)}</p>
-            <p class="greybox">Federal Tax: -$${federalTaxDeduction.toFixed(2)}</p>
-            <hr>
-            <p class="greybox" id="netSalary"><strong>Annual Net Salary: $${netSalary.toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></p>
-            <p class="grey" id="monthlyNetSalary">Your Monthly Net Salary: $${parseFloat(monthlyNetSalary).toLocaleString()}</p>
-            <a href="expenses.html" class="next-link" style="display:block; margin-top:20px;">Next</a>
-        `;
-    });
+    // Add listener to the button if not already added
+    if (!taxesButtonListenerAdded) {
+        document.getElementById("nextTaxesButton").addEventListener("click", () => {
+            const medicareDeduction = salary * 0.0145;
+            const socialSecurityDeduction = salary * 0.062;
+            const stateTaxDeduction = salary * 0.04;
+            const federalTaxDeduction = fedTax(salary);
+            
+            const netSalary = salary - medicareDeduction - socialSecurityDeduction - stateTaxDeduction - federalTaxDeduction;
+            monthlyNetSalary = (netSalary / 12).toFixed(2);
+
+            // Update the spans
+            document.getElementById("medicareAmount").textContent = `$${medicareDeduction.toFixed(2)}`;
+            document.getElementById("socialSecurityAmount").textContent = `$${socialSecurityDeduction.toFixed(2)}`;
+            document.getElementById("stateTaxAmount").textContent = `$${stateTaxDeduction.toFixed(2)}`;
+            document.getElementById("federalTaxAmount").textContent = `$${federalTaxDeduction.toFixed(2)}`;
+            document.getElementById("annualNetAmount").textContent = `$${netSalary.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+            document.getElementById("monthlyNetAmount").textContent = `$${parseFloat(monthlyNetSalary).toLocaleString()}`;
+
+            // Hide the button and show the tax breakdown + next link
+            document.getElementById("nextTaxesButton").style.display = "none";
+            document.getElementById("taxBreakdown").style.display = "block";
+            document.getElementById("nextToExpenses").style.display = "block";
+
+            // Add listener to the next link for saving
+            document.getElementById("nextToExpenses").addEventListener("click", () => {
+                localStorage.setItem("monthlyNet", monthlyNetSalary);
+                localStorage.setItem("totalTaxes", (salary / 12 - monthlyNetSalary).toFixed(2));
+            });
+        });
+        taxesButtonListenerAdded = true;
+    }
 }
 
 // Kick off the process
 getCareers();
-
-// ... keep your existing fetch and federal tax functions ...
-
-// Update the "Next" link to save data when clicked
-document.querySelector(".Btn").addEventListener("click", (e) => {
-    const medicareDeduction = choice.Salary * 0.0145;
-    const socialSecurityDeduction = choice.Salary * 0.062;
-    const stateTaxDeduction = choice.Salary * 0.04;
-    const federalTaxDeduction = fedTax(choice.Salary);
-    
-    const annualNet = choice.Salary - (medicareDeduction + socialSecurityDeduction + stateTaxDeduction + federalTaxDeduction);
-    const monthlyNet = (annualNet / 12).toFixed(2);
-
-    // Save to localStorage for the next pages
-    localStorage.setItem("monthlyNet", monthlyNet);
-    localStorage.setItem("totalTaxes", (choice.Salary / 12 - monthlyNet).toFixed(2)); 
-});

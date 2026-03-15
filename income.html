@@ -6,30 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Income</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/IMages/logo.webp">
 </head>
 
-<body>
+<body id="incoming">
     <nav>
-        <a href="index.html" id="income-1">
+        <a href="index.html">
             <img src="/IMages/images 1.png" id="EECULogo" alt="EECU Logo">
         </a>
     </nav>
-    <section id="welcome-screen">
+
+    <section id="screen">
         <h1>Welcome</h1>
-        <p>For starters, let's calculate your Net Monthly Income to really grasp <br> what you're working with!</p>
-        <!--Add HTML for drop down menu-->
+        <p class="mainTxt">For starters, let's calculate your Net Monthly Income to really grasp <br> what you're working with!</p>
         <section class="dropdown">
             <select id="careers" name="careers">
                 <option disabled selected>Please Choose a Job Title, or Occupation</option>
             </select>
             <div id="income">
+                <h2 class="grey">Gross Income: <span id="grossIncomeAmount">$0</span></h2>
+                <button id="nextTaxesButton">Next</button>
+            </div>
         </section>
         <div id="taxes"></div>
         <div id="fedTaxes"></div>
+        <div id="taxBreakdown" style="display: none;">
+            <p class="mainTxt">Before we show you how much you have for spending, we must first pay good ol' Uncle Sam!</p>
+            <p class="greybox" id="medicareDeduction">Medicare (1.45%): -<span id="medicareAmount">$0.00</span></p>
+            <p class="greybox" id="socialSecurityDeduction">Social Security (6.2%): -<span id="socialSecurityAmount">$0.00</span></p>
+            <p class="greybox" id="stateTaxDeduction">State Tax (4%): -<span id="stateTaxAmount">$0.00</span></p>
+            <p class="greybox" id="federalTaxDeduction">Federal Tax: -<span id="federalTaxAmount">$0.00</span></p>
+            <hr>
+            <p class="greybox" id="annualNetSalary"><strong>Annual Net Salary: <span id="annualNetAmount">$0.00</span></strong></p>
+            <p class="grey" id="monthlyNetSalaryDisplay">Your Monthly Net Salary: <span id="monthlyNetAmount">$0.00</span></p>
+            <a href="expenses.html" class="Btn" id="nextToExpenses">Next</a>
+        </div>
     </section>
-</body>
-<script src="Java.js"></script>
 
+    <footer>
+        <div id="footerLink">
+            <ul>
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">SECURITY CENTER</a></li>
+                <li><a href="#">HOW WE PAY YOUR CHECKING ACCOUNT TRANSACTIONS</a></li>
+                <li><a href="#">SITE MAP</a></li>
+            </ul>
+            <img src="IMages/images 1.png" alt="logo" />
+            <ul>
+                <li><a href="#">PROTECT YOUR HOME FROM FORECLOSURE</a></li>
+                <li><a href="#">WEBSITE ACCESSIBILITY</a></li>
+                <li><a href="#">CAREERS</a></li>
+            </ul>
+        </div>
+        <div id="footerBottom">
+            <ul>
+                <li><a href="#"><img src="IMages/House.png" alt="Equal housing expense Lender"></a></li>
+                <li><a href="#">NMLS#457253</a></li>
+                <li><a href="#">FEDERALLY INSURED BY NCUA</a></li>
+            </ul>
+            <ul id="footer-apps">
+                <li><a href="#"><img src="IMages/AppStore.png" alt="App Store"></a></li>
+                <li><a href="#"><img src="IMages/Facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="IMages/Insta.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="IMages/X.png" alt="X"></a></li>
+                <li><a href="#"><img src="IMages/LinkedIn.png" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="IMages/Youtube.png" alt="YouTube"></a></li>
+                <li><a href="#"><img src="IMages/GooglePlay.png" alt="Google Play"></a></li>
+            </ul>
+            <small>@ 2026 Educational Employees Credit Union</small>
+        </div>
+    </footer>
+
+    <script src="Java.js"></script>
+</body>
 </html>
