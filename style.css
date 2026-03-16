@@ -136,7 +136,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
 }
 
 #screen > h1{
@@ -220,6 +219,33 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     margin-bottom:5vh;
 }
 
+#deduction  {
+    display: flex;
+    background-color: #606060;
+    width: 400px;
+    height: 57px;
+}
+
+#amount {
+    display: flex;
+    background-color: #606060;
+    width: 450px;
+    height: 57px;
+}
+#medicareDeduction, #socialSecurityDeduction, #stateTaxDeduction, #federalTaxDeduction {
+display: flex;
+background-color: #D9D9D9;
+width: 450px;
+}
+
+
+#medicareAmount, #socialSecurityAmount, #stateTaxAmount, #federalTaxAmount {
+  display: flex;
+  background-color:#EFEEEE;
+  width: 400px;
+  height: 57px;
+} 
+
 #userExpenses {
     width: 100%;
     max-width: 946px; 
@@ -265,6 +291,8 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     height: 24px;
     margin-right: 12px;
 }
+
+
 
 .label-box span {
     font-size: 0.9rem;
@@ -354,15 +382,52 @@ a[href="expenses.html"] {
     margin-bottom: 8rem;
 }
 
+
+.borderline {
+    display: flex;
+    width: 95%;
+    height: 5px;
+    background-color: #818080;
+}
+
+#payments-chart {
+    display: flex;        
+    flex-direction: column;       
+    justify-content: space-around; 
+    align-items: flex-start;   
+    gap: 40px;               
+    padding: 20px;
+}
+
+#rows {
+    flex: 1;                   /* Allows the list to grow/shrink */
+    max-width: 500px;          /* Prevents it from getting too wide */
+}
+
+/* Controls the size of the pie chart */
+#chart-container {
+    flex: 1;                   /* Allows the chart container to grow/shrink */
+    max-width: 450px;          /* Prevents the chart from becoming too large */
+    height: 400px;             /* Required: Chart.js needs a set height to render */
+    position: relative;
+}
+
+
+/* Makes the result rows look clean like your image */
+.resultRow {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;    /* Light grey like your mockup */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 /*Footer Stuff*/
 footer {
   margin-top: 5%;
   display: block;
   unicode-bidi: isolate;
-}
-
-#incoming footer {
-margin: 16rem auto;
 }
 
 ul {
