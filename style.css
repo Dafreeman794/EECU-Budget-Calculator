@@ -85,6 +85,13 @@ background-size: 100%;
 height: 25vh;
 }
 
+#indexMain {
+    background-image: url("/IMages/Hero-Image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .Btn {
     display: flex;
     justify-content: center;
@@ -170,7 +177,7 @@ footer {
 }
 
 h1 { font-size: 2.5rem; margin-bottom: 10px; }
-#displayNet { color: #818080; }
+.display { color: #818080; }
 
 .dropdown {
     display: flex;
@@ -311,14 +318,18 @@ background-color: rgba(217, 217, 217, 1);
 border: none;
 }
 
-
-#indexMain {
-    background-image: url("/IMages/Hero-Image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.bordrline {
+    border-top: 1px solid var(--main-content-border);
+    width: 80%;
+    margin: 2rem auto;
+    background-color:#999
+}
 
 a[href="expenses.html"] {
     text-decoration: none;

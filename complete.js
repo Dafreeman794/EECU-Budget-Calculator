@@ -37,3 +37,4 @@ new Chart(ctx, {
         }
     }
 });
+

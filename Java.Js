@@ -117,4 +117,40 @@ function displayCareerInfo() {
 }
 
 // Kick off the process
-getCareers();
+if (document.getElementById("careers")) {
+    // We're on the income page
+    getCareers();
+} else if (document.getElementById("monthlyNetAmount")) {
+    // We're on the expenses page, load the saved net income
+    const savedNet = localStorage.getItem("monthlyNet");
+    if (savedNet) {
+        document.getElementById("monthlyNetAmount").textContent = `$${parseFloat(savedNet).toLocaleString()}`;
+    }
+
+    // Add event listener for the calculate expenses button
+    document.getElementById("calculateExpenses").addEventListener("click", () => {
+        const expenses = {
+            rent: parseFloat(document.getElementById("rent").value) || 0,
+            vehicle: parseFloat(document.getElementById("vehicle").value) || 0,
+            food: parseFloat(document.getElementById("food").value) || 0,
+            cloths: parseFloat(document.getElementById("cloths").value) || 0,
+            Utils: parseFloat(document.getElementById("Utils").value) || 0,
+            debts: parseFloat(document.getElementById("debts").value) || 0,
+            media: parseFloat(document.getElementById("media").value) || 0,
+            Entertainment: parseFloat(document.getElementById("Entertainment").value) || 0,
+            other: parseFloat(document.getElementById("other").value) || 0
+        };
+
+        const totalExpenses = Object.values(expenses).reduce((sum, val) => sum + val, 0);
+        const netIncome = parseFloat(savedNet);
+        const remainder = netIncome - totalExpenses;
+
+        // Save to localStorage
+        localStorage.setItem("expenses", JSON.stringify(expenses));
+        localStorage.setItem("totalExpenses", totalExpenses.toString());
+        localStorage.setItem("remainder", remainder.toString());
+
+        // Navigate to results
+        window.location.href = 'results.html';
+    });
+}

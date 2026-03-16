@@ -16,7 +16,7 @@
         </a>
     </nav>
     <section class="net-income">
-        <h1>Your current Net Income: <br> <span id="displayNet">(Net)</span></h1>
+        <h1>Your current Net Income: <br><span id="monthlyNetAmount" class="display"></span></h1>
         <p class="mainTxt">Congrats! Now we have to fill out post-income necessities.</p>
     
         <form id="userExpenses">
@@ -25,7 +25,7 @@
                     <img src="./IMages/Home.svg" alt="Home">
                     <span>Rent/Mortgage</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter a mortgage">
+                <input type="number" id="rent" class="expense-input" placeholder="Please enter a mortgage">
             </div>
     
             <div class="expense-row">
@@ -33,7 +33,7 @@
                     <img src="./IMages/Car.svg">
                     <span>Vehicle Payment</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter transportation payments">
+                <input type="number" id="vehicle" class="expense-input" placeholder="Please enter transportation payments">
             </div>
     
             <div class="expense-row">
@@ -41,7 +41,7 @@
                     <img src="./IMages/Shopping cart.svg">
                     <span>Food/Edibles</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter Food expenses">
+                <input type="number" id="food" class="expense-input" placeholder="Please enter Food expenses">
             </div>
 
             <div class="expense-row">
@@ -49,7 +49,7 @@
                     <img src="./IMages/Shopping cart.svg">
                     <span>Clothing</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter clothing expenses">
+                <input type="number" id="cloths" class="expense-input" placeholder="Please enter clothing expenses">
             </div>
 
             <div class="expense-row">
@@ -57,7 +57,7 @@
                     <img src="./IMages/Utilities.svg">
                     <span>Utilities</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter Utility expenses">
+                <input type="number" id="Utils" class="expense-input" placeholder="Please enter Utility expenses">
             </div>
             
             <div class="expense-row">
@@ -65,7 +65,7 @@
                     <img src="./IMages/Credit card.svg">
                     <span>Debts (Credit, Student Loans, etc)</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter debt(s)">
+                <input type="number" id="debts" class="expense-input" placeholder="Please enter debt(s)">
             </div>
 
             <div class="expense-row">
@@ -73,7 +73,7 @@
                     <img src="./IMages/Media.svg">
                     <span>Media</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter media subscriptions">
+                <input type="number" id="media" class="expense-input" placeholder="Please enter media subscriptions">
             </div>
 
             <div class="expense-row">
@@ -81,7 +81,7 @@
                     <img src="./IMages/Television.svg">
                     <span>Entertainment</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter entertainment purchases">
+                <input type="number" id="Entertainment" class="expense-input" placeholder="Please enter entertainment purchases">
             </div>
 
             <div class="expense-row">
@@ -89,10 +89,10 @@
                     <img src="./IMages/Other.svg">
                     <span>Other</span>
                 </label>
-                <input type="number" class="expense-input" placeholder="Please enter any other mandatory purchase">
+                <input type="number" id="other" class="expense-input" placeholder="Please enter any other mandatory purchase">
             </div>
         </form>
-        <a href="results.html" class="Btn">Done</a>
+        <button id="calculateExpenses" class="Btn">Done</button>
     </section>
         <footer>
       <div id="footerLink">
@@ -127,6 +127,7 @@
         <small>@ 2026 Educational Employees Credit Union</small>
       </div>
     </footer>
+    <script src="Java.Js"></script>
 </body>
 
 </html>
