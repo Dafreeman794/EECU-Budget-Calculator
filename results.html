@@ -21,9 +21,11 @@
             <!--These will be upadted based on outcome, these titles are just the placeholders-->
     </section>
     
-    <div class="borderline">
+    <div class="border-sector">
+        <div class="borderline">
+        </div>
     </div>
-
+    
     <main id="payments-chart">
         <section id="rows">
             <h2>Original Net Income: (net)</h2>
@@ -63,40 +65,47 @@
                 <p class="label">Other</p>
                 <p class="result"></p>
             </div>
-
-        </main>
+        </section>
         <div id="chart-container">
             <canvas id="budgetChart"></canvas>
         </div>
-        <div id="btns-container">
-            <button class="btns">
-                <img src="IMages/Copy.svg" alt="copy-button" type="svg">
-            </button>
-            <button class="btns">
-                <img src="IMages/Download.svg" alt="download-button" type="svg">
-            </button>
-            <button class="btns">
-                <img src="IMages/More vertical.svg" alt="more-options" type="svg">
-            </button>
-        </div>
-        
+    </main>
+
+    <div class="border-container">
         <div class="borderline">
         </div>
-
+    </div>
+    
+    <div id="btns-container">
+        <button class="btns">
+            <img src="IMages/Copy.svg" alt="copy-button" type="svg">
+        </button>
+        <button class="btns">
+            <img src="IMages/Download.svg" alt="download-button" type="svg">
+        </button>
+        <button class="btns">
+            <img src="IMages/More vertical.svg" alt="more-options" type="svg">
+        </button>
+    </div>
+        
+    <section id="otherBtns">
         <div id="export-container">
-            <button id="export">Export As PDF</button>
+            <button id="nextTaxesButton">Export As PDF</button>
         </div>
-        <button id="debtChecker" name="debt">Ask For Advice</button> <!--display: none if name is debt, check with JS, change to noDebt if none & change display -->
 
+        <div id="debt-container">
+        <button id="nextTaxesButton" name="debt">Ask For Advice</button> <!--display: none if name is debt, check with JS, change to noDebt if none & change display -->
+        </div>
     </section>
+
     <footer>
-      <div id="footerLink">
-        <ul>
-          <li><a href="#">PRIVACY</a></li>
-          <li><a href="#">SECURITY CENTER</a></li>
-          <li><a href="#">HOW WE PAY YOUR CHECKING ACCOUNT TRANSACTIONS</a></li>
-          <li><a href="#">SITE MAP</a></li>
-        </ul>
+        <div id="footerLink">
+            <ul>
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">SECURITY CENTER</a></li>
+                <li><a href="#">HOW WE PAY YOUR CHECKING ACCOUNT TRANSACTIONS</a></li>
+                <li><a href="#">SITE MAP</a></li>
+            </ul>
         <img src="IMages/images 1.png" alt="logo" />
         <ul>
           <li><a href="#">PROTECT YOUR HOME FROM FORECLOSURE</a></li>
