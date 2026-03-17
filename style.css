@@ -181,10 +181,14 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
 .dropdown {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 12px;
-    height: 80vh;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    margin-bottom: 7rem;
+    box-sizing: border-box;
     text-decoration: none;
     border: none;
 }
@@ -217,34 +221,48 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     width:57vh;
     height: 8.5vh;
     margin-bottom:5vh;
+    text-align: center;
 }
 
-#deduction  {
+/* Tax deduction / amount row styling */
+#deduction,
+#amount,
+#medicareDeduction,
+#socialSecurityDeduction,
+#stateTaxDeduction,
+#federalTaxDeduction,
+#medicareAmount,
+#socialSecurityAmount,
+#stateTaxAmount,
+#federalTaxAmount {
     display: flex;
-    background-color: #606060;
-    width: 400px;
+    width: 100%;
+    max-width: 450px;
     height: 57px;
+    margin: 0 auto 0rem;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
+#deduction,
 #amount {
-    display: flex;
     background-color: #606060;
-    width: 450px;
-    height: 57px;
-}
-#medicareDeduction, #socialSecurityDeduction, #stateTaxDeduction, #federalTaxDeduction {
-display: flex;
-background-color: #D9D9D9;
-width: 450px;
 }
 
+#medicareDeduction,
+#socialSecurityDeduction,
+#stateTaxDeduction,
+#federalTaxDeduction {
+    background-color: #D9D9D9;
+}
 
-#medicareAmount, #socialSecurityAmount, #stateTaxAmount, #federalTaxAmount {
-  display: flex;
-  background-color:#EFEEEE;
-  width: 400px;
-  height: 57px;
-} 
+#medicareAmount,
+#socialSecurityAmount,
+#stateTaxAmount,
+#federalTaxAmount {
+    background-color: #EFEEEE;
+}
 
 #userExpenses {
     width: 100%;
@@ -292,7 +310,9 @@ width: 450px;
     margin-right: 12px;
 }
 
-
+#BottomNav {
+    display: none;
+}
 
 .label-box span {
     font-size: 0.9rem;
@@ -390,7 +410,7 @@ a[href="expenses.html"] {
 .borderline {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 5px;
     background-color: #818080;
 }
@@ -402,6 +422,8 @@ a[href="expenses.html"] {
     align-items: center;   
     gap: 40px;               
     padding: 20px;
+    border-left: 5px solid #818080;
+    border-right: 5px solid #818080;
 }
 
 #otherBtns {
@@ -427,24 +449,23 @@ a[href="expenses.html"] {
 }
 
 #rows {
-    flex: 1;                   /* Allows the list to grow/shrink */
-    max-width: 500px;          /* Prevents it from getting too wide */
+    flex: 1;                   
+    max-width: 500px;          
 }
 
-/* Controls the size of the pie chart */
+/* Controls the pie chart size*/
 #chart-container {
-    flex: 1;                   /* Allows the chart container to grow/shrink */
-    max-width: 450px;          /* Prevents the chart from becoming too large */
-    height: 400px;             /* Required: Chart.js needs a set height to render */
+    flex: 1;              
+    max-width: 450px;         
+    height: 400px;             
     position: relative;
 }
 
 
-/* Makes the result rows look clean like your image */
 .resultRow {
     display: flex;
     justify-content: space-between;
-    background-color: #f4f4f4;    /* Light grey like your mockup */
+    background-color: #f4f4f4;    
     margin: 10px 0;
     padding: 10px;
     border-radius: 4px;
@@ -527,6 +548,18 @@ ul {
 }
 
 @media (max-width: 768px) {
+    #BottomNav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        background-color: #0156A6;
+        width: 100%;
+        height: 68px;
+    }
     #indexMain {
         background-image: url(/IMages/Mobile.png);
         background-size: cover;
@@ -538,9 +571,36 @@ ul {
         height: 48px;
         padding: 0 20px;
     }
+
+    #nextTaxesButton {
+        margin: 4rem 5rem;
+    }
     #Hero-Text {
         background-size: 100%;
         height: 145px;
+    }
+    .mainTxt {
+        font-size: 21px;
+    }
+    .dropdown {
+        width: 90%;
+        max-width: 420px;
+    }
+    .dropdown > select {
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+    }
+    #income {
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+    }
+    #btns-container {
+        display: none;
+    }
+    #otherBtns {
+        display: none;
     }
     .label-box span {
         display: none;
